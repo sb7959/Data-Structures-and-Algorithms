@@ -1,0 +1,21 @@
+class Solution {
+    public String convertToTitle(int columnNumber) {
+        int rem;
+        char temp;
+        String str=new String();
+      //  A=A-1;
+        while(columnNumber!=0){
+           /*  int n=0;
+            if(A%26==0){
+                n=(A-1)%26;
+            } */
+            int n= (columnNumber-1)%26;
+            temp= (char)('A'+n);
+            str=temp+str;
+            columnNumber=(columnNumber-1)/26;
+        }
+
+        return str;
+        
+    }
+}
